@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aggiungi un Collegiale</title>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"
+    />
+    <script src="check.js" defer>
+      //defer = it gets executed only after everything else get parsed
+    </script>
+  </head>
+  <body>
+    <ion-app class="ion-padding">
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title> Aggiungi un collegiale: </ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content>
+        <ion-item>
+          <ion-label position="floating">Nome:</ion-label>
+          <br /><ion-input id="name"></ion-input> </ion-item
+        ><ion-item>
+          <ion-label position="floating">Cognome:</ion-label>
+          <br /><ion-input id="surname"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">IBAN</ion-label>
+          <br /><ion-input id="IBAN"></ion-input> </ion-item
+        ><ion-item>
+          <ion-label position="floating">N' Stanza</ion-label>
+          <br /><ion-input id="roomNumber"></ion-input>
+        </ion-item>
+
+        <ion-button color="success">Click Me</ion-button>
+
+        <div id="result">
+          <!-- result if adding collegiale is succesffull -->
+        </div>
+      </ion-content>
+    </ion-app>
+
+    <script>
+      const sendBtn = document.querySelector("ion-button");
+      sendBtn.addEventListener("click", () => {
+        console.log("Clicked");
+      });
+    </script>
+  </body>
+</html>
