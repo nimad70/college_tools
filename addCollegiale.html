@@ -22,14 +22,14 @@
     </script>
   </head>
   <body>
-    <ion-app class="ion-padding">
+    <ion-app>
       <ion-header>
         <ion-toolbar color="primary">
           <ion-title> Aggiungi un collegiale: </ion-title>
         </ion-toolbar>
       </ion-header>
 
-      <ion-content>
+      <ion-content class="ion-padding">
         <ion-item>
           <ion-label position="floating">Nome:</ion-label>
           <br /><ion-input id="name"></ion-input> </ion-item
@@ -38,11 +38,12 @@
           <br /><ion-input id="surname"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label position="floating">IBAN</ion-label>
-          <br /><ion-input id="IBAN"></ion-input> </ion-item
-        ><ion-item>
           <ion-label position="floating">N' Stanza</ion-label>
           <br /><ion-input id="roomNumber"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">IBAN</ion-label>
+          <br /><ion-input id="IBAN"></ion-input>
         </ion-item>
 
         <ion-button color="success">Click Me</ion-button>
@@ -50,6 +51,23 @@
         <div id="result">
           <!-- result if adding collegiale is succesffull -->
         </div>
+
+        <!-- print list of collegials 
+         * we need a server-side language to print these rows
+         * because it has to be relative to the mysql rows -->
+        <script>
+            const collegialsGrid = document.createElement('ion-grid');
+            collegialsGrid.innerHTML ='
+            <ion-grid-content>
+              <ion-row>
+                  <ion-column> Name: ....... </ion-column>
+                  <ion-column> Surname: ....... </ion-column>
+                  <ion-column> roomNumber: ...... </ion-column>
+                  <ion-column> IBAN: ....... </ion-column>
+            </ion-row>
+          </ion-grid-content>
+            ';
+        </script>
       </ion-content>
     </ion-app>
 
