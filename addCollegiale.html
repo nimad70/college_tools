@@ -52,21 +52,17 @@
           <!-- result if adding collegiale is succesffull -->
         </div>
 
-        <!-- print list of collegials 
-         * we need a server-side language to print these rows
-         * because it has to be relative to the mysql rows -->
         <script>
             const collegialsGrid = document.createElement('ion-grid');
-            collegialsGrid.innerHTML ='
+            collegialsGrid.innerHTML ="
             <ion-grid-content>
               <ion-row>
                   <ion-column> Name: ....... </ion-column>
                   <ion-column> Surname: ....... </ion-column>
                   <ion-column> roomNumber: ...... </ion-column>
                   <ion-column> IBAN: ....... </ion-column>
-            </ion-row>
-          </ion-grid-content>
-            ';
+              </ion-row>
+            </ion-grid-content>";
         </script>
       </ion-content>
     </ion-app>
